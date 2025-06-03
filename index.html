@@ -102,6 +102,91 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+    errorBtns[0].addEventListener('click', () => {
+      console.log('console log button');
+    });
+
+    errorBtns[1].addEventListener('click', () => {
+      console.error("Error button")
+    });
+
+    errorBtns[2].addEventListener('click', () => {
+      console.count('count button');
+    });
+
+    errorBtns[3].addEventListener('click', () => {
+      console.warn('warn button');
+    });
+
+    const number = 2;
+    const reason = 'This number is not 3';
+    errorBtns[4].addEventListener('click', () => {
+      console.assert(number == 3, {number, reason});
+    });
+
+    errorBtns[5].addEventListener('click', () => {
+      console.clear();
+    });
+
+    errorBtns[6].addEventListener('click', () => {
+      console.dir(errorBtns[6]);
+    });
+
+    const dirxmlbutton = errorBtns[7];
+    errorBtns[7].addEventListener('click', () => {
+      console.dirxml(dirxmlbutton);
+    });
+
+    const label = 'group';
+    errorBtns[8].addEventListener('click', () => {
+      console.group(label);
+      console.info('Leo');
+      console.info('Mike');
+      console.info('Don');
+    });
+    
+    errorBtns[9].addEventListener('click', () => {
+      console.groupEnd('label');
+    });
+
+    const cse = [
+    {
+      class: 'Software Engineering',
+      number: '110',
+    },
+    {
+      class: 'Machine learning',
+      number: '151a',
+    },
+    {
+      class: 'AI:Search and Reasoning',
+      number: '150b',
+    }
+  ];
+      
+    errorBtns[10].addEventListener('click', () => {
+      console.table(cse);
+    });
+
+    errorBtns[11].addEventListener('click', () => {
+      console.time("timer");
+    });
+
+    errorBtns[12].addEventListener('click', () => {
+      console.timeEnd('timer');
+    });
+
+    errorBtns[13].addEventListener('click', () => {
+      const bob1 = () => { bob2(); };
+      const bob2 = () => { bob3(); };
+      const bob3 = () => { bob4(); };
+      const bob4 = () => { console.trace('Trace from bob4'); };
+    
+      bob1(); 
+    });
+
+   
+
   </script>
 </body>
 
